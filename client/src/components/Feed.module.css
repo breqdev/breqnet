@@ -1,0 +1,12 @@
+.feedContainer {
+    width: min(600px, 100%);
+    margin: 1em auto 1em;
+
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.feedContainer * {
+    box-sizing: border-box;
+}

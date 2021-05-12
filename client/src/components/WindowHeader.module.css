@@ -1,0 +1,15 @@
+.header {
+    flex-shrink: 0;
+
+    background-color: var(--color-light-gray);
+
+    font-size: 2rem;
+    padding: 0.3em;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+
+    flex-grow: 1;
+}

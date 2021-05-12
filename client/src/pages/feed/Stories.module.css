@@ -1,0 +1,26 @@
+.story {
+    display: flex;
+    flex-direction: column;
+
+    text-align: center;
+
+    padding: 1em;
+}
+
+.storyAvatar {
+    font-size: 5rem;
+}
+
+.storyName {
+    font-size: 1rem;
+}
+
+.stories {
+    display: flex;
+    flex-wrap: wrap;
+
+    width: 100%;
+
+    border: 2px solid var(--color-gray);
+    border-radius: 1em;
+}

@@ -1,0 +1,17 @@
+.message {
+    display: flex;
+
+    padding: 0.5em;
+}
+
+.contentColumn {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2em;
+
+    margin-left: 0.5em;
+}
+
+.avatar {
+    font-size: 2rem;
+}

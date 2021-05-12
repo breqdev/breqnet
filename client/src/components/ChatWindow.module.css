@@ -1,0 +1,47 @@
+.chatWindow {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.messages {
+    flex-grow: 1;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.composeBox {
+    flex-shrink: 0;
+
+    display: flex;
+
+    background-color: var(--color-light-gray);
+
+    padding: 0.5em;
+    gap: 0.5em;
+}
+
+.composeBox * {
+    box-sizing: border-box;
+}
+
+.composeBox input {
+    flex-grow: 1;
+
+    font-size: 1rem;
+
+    padding: 0.5em;
+
+    border: 1px solid var(--color-gray);
+    border-radius: 0.5em;
+}
+
+.composeBox button {
+    font-size: 1rem;
+    padding: 0.5em;
+
+    border: 1px solid var(--color-gray);
+    border-radius: 0.5em;
+}

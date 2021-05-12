@@ -1,0 +1,38 @@
+.header {
+    margin: 0.5em;
+
+    display: flex;
+    gap: 0.5em;
+
+    font-size: 1.5rem;
+}
+
+.post {
+    width: 100%;
+
+    border: 2px solid var(--color-gray);
+    border-radius: 1em;
+}
+
+.post hr {
+    border-color: var(--color-gray);
+    margin: 0;
+}
+
+.body {
+    margin: 0 1em;
+}
+
+.footer {
+    display: flex;
+    gap: 0.5em;
+
+    padding: 0.5em;
+
+    font-size: 1.5rem;
+    color: var(--color-dark);
+}
+
+.footer .filler {
+    flex-basis: 100%;
+}

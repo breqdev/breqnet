@@ -1,0 +1,10 @@
+.group {
+    height: 100%;
+    display: flex;
+}
+
+.window {
+    flex-grow: 1;
+
+    overflow-y: auto;
+}

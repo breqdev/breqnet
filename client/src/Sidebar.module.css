@@ -1,0 +1,35 @@
+.sidebar {
+    font-size: 2.5rem;
+
+    display: flex;
+    flex-direction: column;
+
+    height: 100%;
+    width: 2em;
+
+    background-color: var(--color-dark);
+    color: var(--color-light);
+
+    text-align: center;
+}
+
+.sidebarItem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 2em;
+
+    color: var(--color-light);
+}
+
+.sidebar hr {
+    box-sizing: border-box;
+    width: calc(100% - 1em);
+    margin: 0 0.5em;
+    color: var(--color-gray);
+}
+
+.filler {
+    flex-grow: 1;
+}
