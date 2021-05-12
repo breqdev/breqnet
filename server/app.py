@@ -2,11 +2,13 @@ import datetime
 
 from flask import Flask, request, jsonify
 from flask_sqlalchemy import SQLAlchemy
+from flask_cors import CORS, cross_origin
 import jwt
 from werkzeug.security import check_password_hash, generate_password_hash
 
 
 app = Flask(__name__)
+CORS(app)
 
 app.config["SECRET_KEY"] = "not very secret"
 app.config["SQLALCHEMY_DATABASE_URI"] = "postgresql:///breqnet"
@@ -39,6 +41,7 @@ class User(db.Model):
 
 
 @app.route("/")
+@cross_origin()
 def hello():
     token = request.headers.get("Authorization").split(" ")[1]
 
@@ -56,6 +59,7 @@ def hello():
 
 
 @app.route("/signup", methods=["POST"])
+@cross_origin()
 def signup():
     name = request.form.get("name")
     email = request.form.get("email")
@@ -81,6 +85,7 @@ def signup():
 
 
 @app.route("/login", methods=["POST"])
+@cross_origin()
 def login():
     email = request.form.get("email")
     password = request.form.get("password")
