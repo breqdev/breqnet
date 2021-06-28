@@ -10,6 +10,7 @@ import Messages from "./pages/messages/Messages.js"
 import Profile from "./pages/profile/Profile.js"
 import Group from "./pages/group/Group.js"
 import Settings from "./pages/settings/Settings.js"
+import Compose from "./pages/compose/Compose.js"
 
 import AuthContext from "./context/AuthContext.js"
 
@@ -29,6 +30,7 @@ export default function App() {
                             <Route path="/profile" component={Profile} />
                             <Route path="/group" component={Group} />
                             <Route path="/settings" component={Settings} />
+                            <Route path="/compose" component={Compose} />
                         </Switch>
                     </div>
                 </div>

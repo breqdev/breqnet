@@ -30,6 +30,18 @@ function SidebarItem(props) {
     )
 }
 
+function GroupSection(props) {
+    let groups = [3, 4]
+
+    groups = groups.map(group => <SidebarItem icon={faUsers} title="Group" key={group} link={`/group/${group}`} />)
+
+    return (
+        <>
+            {groups}
+        </>
+    )
+}
+
 export default function Sidebar(props) {
     return (
         <SidebarContainer>
@@ -37,7 +49,7 @@ export default function Sidebar(props) {
             <SidebarItem icon={faPaperPlane} title="Direct Messages" link="/messages" />
             <SidebarItem icon={faUser} title="My Profile" link="/profile" />
             <hr />
-            <SidebarItem icon={faUsers} title="Group" link="/group/1" />
+            <GroupSection />
             <div className={styles.filler} />
             <SidebarItem icon={faCog} title="Settings" link="/settings" />
         </SidebarContainer>

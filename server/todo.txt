@@ -1,0 +1,62 @@
+POST /auth/login
+POST /auth/signup
+POST /auth/verify - verify your email address
+PATCH /auth/account - edit username and password
+DELETE /auth/account
+
+GET /profile/<user_id> - get that user's profile (name, bio, avatar)
+PATCH /profile - edit your own profile (name, bio, avatar)
+
+GET /posts/<user_id> - get that user's posts
+POST /posts - create a new post
+PATCH /posts/<user_id>/<post_id>
+DELETE /posts/<user_id>/<post_id>
+
+GET /messages/<user_id> - get messages in conversation with user
+POST /messages/<user_id> - send a message to that user
+PATCH /messages/<user_id>/<message_id> - edit a message
+DELETE /messages/<user_id>/<message_id>
+DELETE /messages/<user_id> - close the message
+
+group chats
+GET /messages/dm/<dm_id>
+POST /messages/dm/<dm_id>
+PATCH /messages/dm/<dm_id>/<message_id>
+DELETE /messages/dm/<dm_id>/<message_id>
+DELETE /messages/dm/<dm_id>
+
+GET /following/<user_id>
+GET /followers/<user_id>
+GET /relationship/<user_id> - get your current relationship (following, not following) to this other user
+POST /relationship/<user_id> - follow or unfollow a user
+
+POST /groups - create a new group
+GET /groups/<group_id> - get the name, bio, avatar, channel list of a group
+PATCH /groups/<group_id> - edit this info
+DELETE /groups/<group_id>
+
+GET /channels/<group_id> - get all channels
+POST /channels/<group_id> - create a new channel
+PATCH /channels/<group_id>/<channel_id> - edit an existing channel
+DELETE /channels/<group_id>/<channel_id>
+
+GET /channels/<group_id>/<channel_id> - get the contents of the channel
+POST /channels/<group_id>/<channel_id> - post a new message or post to the channel
+PATCH /channels/<group_id>/<channel_id>/<message_id>
+DELETE /channels/<group_id>/<channel_id>/<message_id>
+(these two could be post_id instead of message_id)
+
+GET /feed - get your home feed
+GET /stories - get unread stories
+
+GET /stories/<user_id>
+POST /stories
+DELETE /stories/<user_id>/<story_id>
+
+GET /stories/group/<group_id>
+POST /stories/group/<group_id>
+DELETE /stories/group/<group_id>/<story_id>
+
+
+
+

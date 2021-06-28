@@ -6,13 +6,18 @@ import Avatar from "../../components/Avatar.js"
 import styles from "./UserList.module.css"
 
 function User(props) {
+    let idToName = {
+        1: "Brooke",
+        2: "Max Michael"
+    }
+
     return (
-        <Link to="/messages/1" className={styles.user}>
+        <Link to={`/messages/${props.id}`} className={styles.user}>
             <span className={styles.avatar}>
-                <Avatar hash="bfd63b4c9574d59b8108f31a52da17c8" />
+                <Avatar id={props.id} />
             </span>
             <span className={styles.name}>
-                Brooke
+                {idToName[props.id]}
             </span>
         </Link>
     )
@@ -32,9 +37,8 @@ export default function UserList(props) {
     return (
         <div className={styles.userList}>
             <Header />
-            <User />
-            <User />
-            <User />
+            <User id={1} />
+            <User id={2} />
         </div>
     )
 }

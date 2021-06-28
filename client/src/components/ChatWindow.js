@@ -1,16 +1,5 @@
-import Message from "./Message.js"
+import Messages from "./Messages.js"
 import styles from "./ChatWindow.module.css"
-
-function Messages(props) {
-    return (
-        <div className={styles.messages}>
-            <Message />
-            <Message />
-            <Message />
-            <Message />
-        </div>
-    )
-}
 
 function ComposeBox(props) {
     return (

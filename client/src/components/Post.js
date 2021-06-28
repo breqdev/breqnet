@@ -9,8 +9,8 @@ import styles from "./Post.module.css"
 function Header(props) {
     return (
         <div className={styles.header}>
-            <Avatar hash="bfd63b4c9574d59b8108f31a52da17c8" />
-            <Name name="Brooke" id="1" />
+            <Avatar id={props.id} />
+            <Name id={props.id} />
         </div>
     )
 }
@@ -18,8 +18,7 @@ function Header(props) {
 function Body(props) {
     return (
         <div className={styles.body}>
-            <h1>Hello!</h1>
-            <p>This is post content</p>
+            <p>{props.content}</p>
         </div>
     )
 }
@@ -40,9 +39,9 @@ function Footer(props) {
 export default function Post(props) {
     return (
         <div className={styles.post}>
-            <Header />
+            <Header id={props.user} />
             <hr />
-            <Body />
+            <Body content={props.content} />
             <hr />
             <Footer />
         </div>
